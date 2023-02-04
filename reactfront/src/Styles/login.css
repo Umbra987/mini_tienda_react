@@ -1,0 +1,169 @@
+
+
+.containerLogin{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.853);
+}
+
+.login{
+    width: 750px;
+    padding-top: 20px;
+    height: 600px;
+    background-color: rgb(232 231 226);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btnCotainer{
+    display: flex;
+    justify-content: center;
+    flex-flow:row wrap;
+}
+
+
+.btnSubmit{
+    width: 150px;
+    margin: 10px;
+    height: 50px;
+    border: 0;
+    bottom: -20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.inputLogin{
+    width: 100%;
+    height: 60px;
+    margin: 10px;
+}
+
+.inputLogin input{
+    width: 80%;
+    height: 100%;
+    padding-left: 10px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid black ;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+
+.imgLogin{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.imgLogin img{
+    width: 60%;
+}
+
+.Register{
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    padding-top: 20px;
+    height: 100%;
+    background-color:rgb(232 231 226);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Register img{
+    width:100%;
+}
+
+.Register .containerRegister{
+    width: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: -200px;
+}
+
+.Register .btnSubmit{
+    margin-top: -10%;
+    margin-left: -5%;
+}
+
+
+.Register .inputLogin{
+    background-color: transparent;
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: black;
+    border-bottom: 1px solid black ;
+}
+
+.Register .inputLogin:focus{
+    outline: none;
+}
+
+.Register .gmail{
+    display: inline;
+    margin-left: -140px;
+    width: 70%;
+}
+
+.Register p{
+    position:absolute;
+    right: 50px;
+    bottom: 20%;
+    color: gray;
+}
+
+
+
+.containerRegister{
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+.login .inputLogin input:focus{
+    outline: none;
+}
+
+.none{
+    display: none;
+}
+
+
+
+.Register .btnSubmit{
+    width: 200px;
+    margin: 10px;
+    height: 50px;
+    border: 0;
+    bottom: -20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btnSubmit:hover{
+    background-color: gray;
+}

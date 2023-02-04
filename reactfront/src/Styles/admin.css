@@ -1,0 +1,185 @@
+.container-admin{
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 8%, rgba(0,0,0,1) 46%, rgba(224,208,208,1) 84%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-titles{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.container-titles h2{
+    align-items: center;
+    font-weight: 200;
+    margin-left: -60px;
+    font-family: 'Aboreto', cursive;
+    user-select: none;
+}
+
+.container_product_admin{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.514);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.container_product_admin input{
+    border: 0;
+    width: 10%;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    margin-left: -60px;
+
+}
+.container_product_admin div{
+  border: 0;
+  width: 14%;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  margin-left: -60px;
+
+}
+.container_product_admin span{
+    position: absolute;
+    font-size: 30px;
+    right: 2%;
+    cursor: pointer;
+}
+
+.Description_Product_admin{
+    height: 70%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.Description_Product_admin:placeholder-shown{
+  text-overflow: ellipsis;
+}
+
+  .footer-login{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: black;
+    align-items: center;
+  }
+
+  .footer-login h1{
+	position: absolute;
+	font-weight: 200;
+	letter-spacing: 3vw;
+	color: white;
+	left: 30vw;
+	font-family: 'Aboreto', cursive;
+	user-select: none;
+ }
+
+ .containerAdmin{
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.514);
+    background-color: white;
+ }
+
+ .containerAdmin input{
+    border: 0;
+    width: 20%;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: -60px;
+ }
+
+ .containerAdmin span{
+  cursor: pointer;
+ }
+
+ .containerAdmin input:focus{
+  outline: none;
+  border: 0;
+ }
+
+ .titleAdmin{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  
+  color: white;
+  background-color: black;
+ }
+
+ .titleAdmin h2{
+  font-weight: 200;
+  font-family: 'Aboreto', cursive;
+  padding-left: 20px;
+	user-select: none;
+ }
+
+ .containerAdmin span{
+  font-size: 30px;
+ }
+
+ 
+ .titleProductsadmin{
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 50px;
+  padding-top: 20px;
+  padding-left: 2px;
+  font-family: 'Aboreto', cursive;
+	user-select: none;
+ }
+
+ .titleProductsadmin h1{
+  font-size: 30px;
+  font-weight: 200;
+ }
+
+
+ .nota{
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-top: -21px;
+  padding-left: 2%;
+  padding-bottom: 10px;
+  font-family: 'Aboreto', cursive;
+	user-select: none;
+  border-bottom: 1px solid white;
+ }
+
+ .nota h3{
+  font-weight: 200;
+ }
+ 
+ 

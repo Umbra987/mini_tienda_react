@@ -1,0 +1,284 @@
+/*Estilos del header*/
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+	top: 0;
+	position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+
+
+
+
+/*Clase para llegar a apagar algun objeto del DOM */
+.none{
+    display: none;
+}
+
+
+.logo_carrito{
+	position: relative;
+    height: 100px;
+    width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+    z-index: 0;
+}
+
+.logo_carrito span{
+    font-size: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	user-select: none;
+}
+
+.logo_header{
+	margin-top: 1px;
+    width: 106px;
+    z-index: 1;
+}
+
+.logo_header img{
+    width: 100%;
+}
+
+/*Estilo del contador que aparece debajo del carrito ,que es el contador de los productos */
+.contador_items{
+    background-color: rgb(6, 6, 87);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    right: 15%;
+    top: 55%;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.container-carrito-products {
+	position: absolute;
+	top: 60px;
+	right: 5vw;
+	background-color: #fff;
+	overflow: hidden;
+	overflow-y: scroll;
+	scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+	max-height: 400px;
+	width: 350px;
+	z-index: 1;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-carrito-products::-webkit-scrollbar {
+	width: 4px;
+	height: 100%;
+  }
+  
+.container-carrito-products::-webkit-scrollbar-button {
+	width: 2px;
+	height: 100%;
+  }
+  
+.container-carrito-products::-webkit-scrollbar-thumb {
+	background: #e1e1e1;
+	border: 0px none #ffffff;
+  }
+  
+.container-carrito-products::-webkit-scrollbar-thumb:hover {
+	background: #000000;
+  }
+  
+.container-carrito-products::-webkit-scrollbar-thumb:active {
+	background: #000000;
+  }
+  
+.container-carrito-products::-webkit-scrollbar-track {
+	background: #666666;
+	border: 0px none #ffffff;
+  }
+  
+.container-carrito-products::-webkit-scrollbar-track:hover {
+	background: #666666;
+  }
+  
+.container-carrito-products::-webkit-scrollbar-track:active {
+	background: #524e4e;
+  }
+  
+.container-carrito-products::-webkit-scrollbar-corner {
+	background: transparent;
+  }
+
+@media (max-width:1020px) {
+	.header{
+		width: 100%;
+	}
+	.container-carrito-products{
+		right: 10vw;
+	}
+	
+}
+
+
+
+
+/*Estilos de la ventana que se abre al presionar el icono del carrito */
+
+/*contenedor principal*/
+.cart-product {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px;
+	position: relative;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/*Organizacion de la informacion dentro de el */
+.info-cart-product {
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+	height: 100%;
+}
+
+/*Estilos del titulo,precio y cantidad que se encuentra en el carrito de un producto */
+
+.titulo-producto-carrito {
+	margin-left: 8.5px;
+	font-size: 15px;
+}
+
+.precio-producto-carrito {
+	font-weight: 700;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.cantidad-producto-carrito {
+	font-weight: 400;
+	font-size: 15px;
+}
+
+/*Icono de eliminar un producto del carrito */
+.icon-close {
+	width: 20px;
+	height: 20px;
+}
+
+.icon-close:hover {
+	background-color: gray;
+	cursor: pointer;
+}
+
+
+/*Estilos del total a pagar,usando la propiedad gap que lo que hace es que le decimos que 
+separe tanto las columnas como las filas de la cuadrícula CSS con ese tamaño */
+.cart-total {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	gap: 20px;
+}
+
+.cart-total h3 {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.total-pagar {
+	font-size: 15px;
+	font-weight: 900;
+}
+
+/*Estilos del boton de limpiar el carrito */
+.btn-clear-all {
+	border: none;
+	background-color: #000;
+	color: #fff;
+	padding: 15px 0;
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	font-family: inherit;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+
+.btn-clear-all:hover{
+  background-color: #333;
+  transform: scale(1.03);
+  border-radius: 0;
+}
+
+.btn_pay{
+	border: none;
+	background-color: goldenrod;
+	font-weight: bold;
+	color: black;
+	padding: 15px 0;
+	display: block;
+	width: 100%;
+	font-family: inherit;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+
+.btn_pay:hover{
+	background-color: rgba(255, 217, 0, 0.651);
+	transform: scale(1.03);
+	border-radius: 0;
+  }
+
+/*Aviso cuando el carrito esta vacio*/
+.cart-empty {
+	padding: 15px;
+	text-align: center;
+}
+
+.AddRow{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 5.7%;
+	top: 0;
+	cursor: pointer;
+}
+.RemoveRow{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	transform:rotateX(180deg) ;
+	left: 6%;
+	bottom: 0;
+	cursor: pointer;
+}
+ .header h1{
+	position: absolute;
+	font-weight: 200;
+	letter-spacing: 2vw;
+	color: white;
+	left: 30vw;
+	font-family: 'Aboreto', cursive;
+	user-select: none;
+ }
+
+ Card_Element{
+	height: 200px;
+ }
