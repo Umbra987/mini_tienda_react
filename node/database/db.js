@@ -4,10 +4,9 @@ import { Sequelize } from "sequelize"
 //El nombre de la base de datos usuario contraseña el dialecto que se va a manejar el host y el puerto donde
 //Se va a ejecutar esa base de datos
 
-const db = new Sequelize('productos_app','root','root',{
-    host:'localhost',
-    dialect: 'mysql',
-    port : 	3306
+const db = new Sequelize('productosapp','umbra987','Manchitas12',{
+    host:'ricoshop.com.mialias.net',
+    dialect: 'mysql'
 });
 
 
