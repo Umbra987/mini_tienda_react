@@ -6,7 +6,7 @@ import BlogModel from '../models/BlogModel.js';
 //Mostrar todos los productos
  export const getAllProducts = async (req,res) => {
     try{
-        const products  = await BlogModel.findAll()
+        const products  = await BlogModel.findAll()//.findAll busca y devuelve todos los productos que cumplan con el modelo
         res.json(products);
     }catch(error) {
         res.json({message: error.message});
@@ -16,7 +16,7 @@ import BlogModel from '../models/BlogModel.js';
  //Mostrar solo un producto
  export const getProduct = async (req,res) => {
     try{
-        const product  = await BlogModel.findAll({
+        const product  = await BlogModel.findAll({//Busca todos los productos que cumplan con el modelo y con el id solicitado
             where: {id:req.params.id}
         })
         res.json(product[0]);
@@ -48,7 +48,7 @@ import BlogModel from '../models/BlogModel.js';
  }
 
 
- //Crear un producto
+ //Crear un producto de acuerdo al blogModel con el cuerpo de la solicitud
 
  export const createProduct = async (req,res) =>{
     try{

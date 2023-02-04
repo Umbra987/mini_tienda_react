@@ -8,10 +8,10 @@ const URL = "https://ecommerce-p3mq.onrender.com/register/";
 export const useRegister = ({user,setUser}) =>{
 
     //Variables de estado donde se guardaran los datos del nuevo usuario
-    const [nameIn, setNameIn] = useState('');
-    const [passwordIn, setPasswordIn] = useState('');
-    const [telIn, setTelIn] = useState('');
-    const [emailIn, setEmailIn] = useState('');
+    const [nameIn, setNameIn] = useState('');//Variable de estado del nombre
+    const [passwordIn, setPasswordIn] = useState('');//Variable de estado de la contraseña
+    const [telIn, setTelIn] = useState('');//Variable de estado del telefono
+    const [emailIn, setEmailIn] = useState('');//Variable de estado del email
 
     const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ export const useRegister = ({user,setUser}) =>{
     const [users,setUsers] = useState([]);
 
     const navigateLogin = () => {
-        navigate('/login')
+        navigate('/login')//Navega al login
     };
 
 //Primero verificamos que todos los campos esten llenos,luego buscamos si el nombre de usuario ya esta o no en uso
@@ -42,21 +42,21 @@ export const useRegister = ({user,setUser}) =>{
 //cree un nuevo usuario en la base de datos
     const onRegisterUser = async (e) => {
         e.preventDefault();
-        if(nameIn !== "" && passwordIn !== "" && telIn !== "" && emailIn !== ""){
+        if(nameIn !== "" && passwordIn !== "" && telIn !== "" && emailIn !== ""){//Todos los campos estan llenos?
 
-        if(users.find((u) => ((u.userName === nameIn)))){
+        if(users.find((u) => ((u.userName === nameIn)))){//Se verifica que nombre de usuario no exista ya
             alert('El nombre ingresado ya se encuentra en uso...');
-            window.location.reload();
+            window.location.reload();//Recargar pagina
         } 
         else {
-            navigateLogin();
-            await axios.post(URL,{userName : nameIn, password : passwordIn, telefono : telIn, email : emailIn+"@gmail.com"});   
+            navigateLogin();//Navega al login
+            await axios.post(URL,{userName : nameIn, password : passwordIn, telefono : telIn, email : emailIn+"@gmail.com"});//Con una peticion post se crea el nuevo usuario en base de datos
             
         }
     }
     else{
-        alert("Hay campos incompletos...");
-        window.location.reload();
+        alert("Hay campos incompletos...");//Habia campos incompletos
+        window.location.reload();//Recargar pagin
     } 
     };
 

@@ -18,14 +18,14 @@ const ShowProducts = ({allProducts,setAllProducts,countProducts,setCountProducts
     const changeRegistered = async (product) => {
         const body = 
         {
-            id : product.id,
-            nombre : product.nombre,
-            valor : product.valor,
-            cantidad : product.cantidad,
-            description : product.description,
-            minimo : product.minimo,
-            stock : product.stock - product.cantidad,
-            maximo : product.maximo
+            id : product.id,//Id del producto
+            nombre : product.nombre,//Nombre del producto
+            valor : product.valor,//Valor del producto
+            cantidad : product.cantidad,//Cantidad del producto
+            description : product.description,//Description del producto
+            minimo : product.minimo,//stock minimo
+            stock : product.stock - product.cantidad,//stock menos la cantidad del producto
+            maximo : product.maximo//stock maximo
         }
         restProduct(body);
     }

@@ -11,11 +11,11 @@ export const Login = ({user,setUser}) =>{
     const navigate = useNavigate();
 
     const navigateToRegister = () =>{
-        navigate('/register');
+        navigate('/register');//navega al register
     }
 
     const navigateToCatalogo = () =>{
-        navigate('/');
+        navigate('/');//navega al catalogo
     }
 
     //Son las variables de estado donde se va a guardar los valores ingresados en los inputs del login.
@@ -41,12 +41,12 @@ export const Login = ({user,setUser}) =>{
             if((user.userName === entrada) && (user.password) === entradaP ){
 
                 if(user.id === 1){
-                    setUser(user);
-                    navigate('/admin');
+                    setUser(user);//Insertamos el nombre del usuario que ingreso
+                    navigate('/admin');//navega al apartado del admin
                 }
                 else{
-                    setUser(user.userName);
-                    navigate('/');
+                    setUser(user.userName);//Insertamos el nombre del usuario que ingreso
+                    navigate('/');//navegal catalogo
                 }    
             }
         })

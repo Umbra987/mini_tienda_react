@@ -45,25 +45,25 @@ export const useAdmin = ({user,setUser}) =>{
         const body = 
         {
             id : product.id,
-            nombre : nameProduct === "" ? product.nombre : nameProduct,
-            valor : valueProduct === "" ? product.valor : valueProduct,
-            cantidad : quantityProduct === "" ? product.cantidad : quantityProduct,
-            description : DesProduct === "" ? product.description : DesProduct,
-            minimo : minProduct === "" ? product.minimo : minProduct,
-            stock : stockProduct === "" ? product.stock : stockProduct,
-            maximo : maxProduct === "" ? product.maximo : maxProduct
+            nombre : nameProduct === "" ? product.nombre : nameProduct,//Si esta vacio el input del nombre se envia el valor que ya existia
+            valor : valueProduct === "" ? product.valor : valueProduct,//Si esta vacio el input del valor se envia el valor que ya existia
+            cantidad : quantityProduct === "" ? product.cantidad : quantityProduct,//Si esta vacio el input de la cantidad se envia el valor que ya existia
+            description : DesProduct === "" ? product.description : DesProduct,//Si esta vacio el input de la descripcion se envia el valor que ya existia
+            minimo : minProduct === "" ? product.minimo : minProduct,//Si esta vacio el input del stock minimo se envia el valor que ya existia
+            stock : stockProduct === "" ? product.stock : stockProduct,//Si esta vacio el input del stock se envia el valor que ya existia
+            maximo : maxProduct === "" ? product.maximo : maxProduct//Si esta vacio el input del stock maximo se envia el valor que ya existia
         }
         changeCamp(body);
        console.log("registro actualizado"); 
-       window.location.reload();
+       window.location.reload();//Recargar pagina
     }
 
     
 
-    const[userNameIn,setUserNameIn] = useState('');
-    const[userPasswordIn,setUserPasswordIn] = useState('');
-    const[userTelIn,setUserTelIn] = useState('');
-    const[userEmailIn,setUserEmailIn] = useState('');
+    const[userNameIn,setUserNameIn] = useState('');//Variable del nombre del usuario
+    const[userPasswordIn,setUserPasswordIn] = useState('');//Variable del nombre de la contraseña
+    const[userTelIn,setUserTelIn] = useState('');//Variable del nombre del telefono
+    const[userEmailIn,setUserEmailIn] = useState('');//Variable del nombre del email
 
     const changeAdmin = async (body) => {
         const get = await axios.post("https://ecommerce-p3mq.onrender.com/admin", body)
@@ -81,13 +81,13 @@ export const useAdmin = ({user,setUser}) =>{
         }
         changeAdmin(body);
         alert("Los datos han sido actualizados,se veran reflejados la proxima vez que ingrese...");
-       window.location.reload();
+       window.location.reload();//Recargar pagina
     }
 
-    const SesionOut = () =>{
+    const SesionOut = () =>{//boton para cerrar la sesion
         alert("Sesion cerrada...");
-		setUser("");
-        navigate('/login');
+		setUser("");//Nombre del usuario vacio(el usuario ha cerrado su sesion)
+        navigate('/login');//navega al login
 	}
 
     return(//Luego retornamos una estructura html

@@ -6,15 +6,15 @@ const stripe = require ('stripe')(CONFIG);
 pay.post("/pay",(req,res) =>{
     let {id,amount} = req.body;
     stripe.paymentIntents.create({
-        amount: amount,
-        currency: 'cop',
+        amount: amount,//Monto total a pagar
+        currency: 'cop',//moneda
         payment_method: id,
-        confirm: true
+        confirm: true//Confirmacion del pago
     }).then((pay)=>{
-        res.sendStatus(204);
+        res.sendStatus(204);//retorno de estado
     }).catch((e)=>{
-        console.log(e);
-        res.sendStatus(400);
+        console.log(e);//Mostramos en consola el error
+        res.sendStatus(400);//retorno de estado
     });
 });
 

@@ -19,7 +19,7 @@
     //Cors es un medida de seguridad que asegura que todos los datos vienen del mismo lugar y no de directorios ajenos al ya establecido
     app.use(cors());
     app.use(express.json());
-    app.use(pay);
+    app.use(pay);//router del metodo de pago
     //Definimos cual va a ser la ruta predeterminada y con routers vamos a estar en ella
 
     app.use('/',Routes_Almacen);

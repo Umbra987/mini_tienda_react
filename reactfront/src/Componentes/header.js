@@ -21,10 +21,10 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
 
 	const navigateLogin = () => {
 		if(user === ""){
-			navigate('/login')
+			navigate('/login')//navega al login
 		}
         else{
-			alert("Sesion iniciada de " + user);
+			alert("Sesion iniciada de " + user);//Ya hay una sesion iniciada
 		}
     };
 
@@ -38,16 +38,16 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
     const RegisteredUp = async (product) => {
         const body = 
         {
-            id : product.id,
-            nombre : product.nombre,
-            valor : product.valor,
-            cantidad : product.cantidad + 1,
-            description : product.description,
-            minimo : product.minimo,
-            stock : product.stock - (product.cantidad + 1),
-            maximo : product.maximo
+            id : product.id,//Id del producto
+            nombre : product.nombre,//Nombre del producto
+            valor : product.valor,//Valor del producto
+            cantidad : product.cantidad + 1,//Cantidad del producto
+            description : product.description,//Descripcion del producto
+            minimo : product.minimo,//Stock minimo
+            stock : product.stock - (product.cantidad + 1),//Stock del producto
+            maximo : product.maximo//Stock maximo
         }
-        restProduct(body);
+        restProduct(body);//Se resta al stock y se suma a la cantidad de los productos en el carrito
     }
 
     //Para actualizar la base de datos cuando se disminuya un producto del carrito 
@@ -60,16 +60,16 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
     const RegisteredLow = async (product) => {
         const body = 
         {
-            id : product.id,
-            nombre : product.nombre,
-            valor : product.valor,
-            cantidad : product.cantidad - 1,
-            description : product.description,
-            minimo : product.minimo,
-            stock : product.stock - (product.cantidad - 1),
-            maximo : product.maximo
+            id : product.id,//Id del producto
+            nombre : product.nombre,//Nombre del producto
+            valor : product.valor,//Valor del producto
+            cantidad : product.cantidad - 1,//Cantidad del producto
+            description : product.description,//Descripcion del producto
+            minimo : product.minimo,//Stock minimo
+            stock : product.stock - (product.cantidad - 1),//Stock del producto
+            maximo : product.maximo//Stock maximo
         }
-        restLowProduct(body);
+        restLowProduct(body);//Se devuelve 1 producto reservado a la base de datos
     }
 
     //Para actualizar la base de datos cuando se limpie el carrito 
@@ -83,16 +83,16 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
 	const RegisteredDelete = async (product) => {
         const body = 
         {
-            id : product.id,
-            nombre : product.nombre,
-            valor : product.valor,
-            stock : product.stock,
-            cantidad : 1,
-            description : product.description,
-            minimo : product.minimo,
-            maximo : product.maximo
+            id : product.id,//Id del producto
+            nombre : product.nombre,//Nombre del producto
+            valor : product.valor,//Valor del producto
+            stock : product.stock, // El stock vuelve a hacer el mismo que antes de la reserva
+            cantidad : 1,//cantidad vuelve a 1
+            description : product.description,//Descripcion del producto
+            minimo : product.minimo,//Stock minimo
+            maximo : product.maximo//Stock maximo
         }
-        restDeleteProduct(body);
+        restDeleteProduct(body);//Se devuelve a la base de datos la cantidad reservada del producto
     }
 
 	//Esta constante lo unico que va a hacer es decir si el carrito fue precionado o no
@@ -101,30 +101,27 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
 	//Esta constante recibe un producto del carrito ,luego lo elimina y resta tanto su 
 	//cantidad como lo que valia a total y al contador de productos del carrito
     const onDeleteProduct = (product) =>{
-
-        const resultados = allProducts.filter(item => item.id !== product.id);
-		
-        setTotal(total - product.valor * product.cantidad);
-		setCountProducts(countProducts - product.cantidad);
-		RegisteredDelete(product);
-		setAllProducts(resultados);
+        const resultados = allProducts.filter(item => item.id !== product.id);//se crea un nuevo arreglo donde no se añade el producto que fue eliminado del producto
+        setTotal(total - product.valor * product.cantidad);//Se resta al total
+		setCountProducts(countProducts - product.cantidad);//Se resta al contador
+		RegisteredDelete(product);//Se devuelve a la base de datos la cantidad de productos reservados
+		setAllProducts(resultados);//El arreglo ahora se vuelve el nuevo carrito
     }
 
 	const onAddProduct = (product) =>{
-        if(product.stock>0){
+        if(product.stock>0){//Si hay disponibilidad del producto?
         if((product.cantidad < product.maximo) && (product.cantidad >= product.minimo) ){
-        if(allProducts.find(item => item.id === product.id) ){
+        if(allProducts.find(item => item.id === product.id) ){//Para añadir al producto que ya existe en el carrito
             //Si ya hay producto con el mismo id suma a cantidad,sino lo agrega
             const products = allProducts.map(item => item.id === product.id ? {...item,cantidad : item.cantidad + 1 } 
                 : item
             );
             //Cada vez que se encuentre o no un producto con un id que ya esta en el carrtio,se actualiza
             //cual es el total a pagar
-            setTotal(total + product.valor * product.cantidad);
+            setTotal(total + product.valor * product.cantidad);//Se suma al total
             //cuantos productos hay en el carrito
-			setCountProducts(countProducts + 1);
-
-			RegisteredUp(product);
+			setCountProducts(countProducts + 1);//Sumamos al contador de productos en el carrito
+			RegisteredUp(product);//Se reserva un producto mas al carrito
             //y la lista de los productos que hay en el carrito
             return setAllProducts([...products]);
 
@@ -136,7 +133,7 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
     }
 	
 	const onRemoveProduct = (product) =>{
-		if(product.cantidad>1){
+		if(product.cantidad>1){//cantidad no puede ser 0
         if(allProducts.find(item => item.id === product.id)){
             //Si ya hay producto con el mismo id resta a cantidad
             const products = allProducts.map(item => item.id === product.id ? {...item,cantidad : item.cantidad - 1 } 
@@ -144,11 +141,11 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
             );
             //Cada vez que se encuentre o no un producto con un id que ya esta en el carrtio,se actualiza
             //cual es el total a pagar
-            setTotal(total - product.valor );
+            setTotal(total - product.valor );//Restamos el valor del producto que se removio
             //cuantos productos hay en el carrito
-			setCountProducts(countProducts - 1);
+			setCountProducts(countProducts - 1);//Restamos al contador de productos del carrito
 
-			RegisteredLow(product);
+			RegisteredLow(product);//Hacemos la reserva de los productos en base de datos
             //y la lista de los productos que hay en el carrito
             return setAllProducts([...products]);
         	}
@@ -157,17 +154,18 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
 
 	//Aca lo que se hace es vaciar por completo el carrito poniendolo como un espacio vacio,poniendo a total y a contador de productos en 0.
     const onCleanCart = () =>{
-        const auxProducts = allProducts;
-        auxProducts.map(product => onDeleteProduct(product));
-		setAllProducts([]);
-        setTotal(0);
-        setCountProducts(0);
-        console.log(auxProducts)
+        const auxProducts = allProducts;//Guardamos el carrito en una variable auxiliar para devolver luego los productos reservados
+        auxProducts.map(product => onDeleteProduct(product));//Mapeamos al carrito y vamos devolviendo los productos reservados
+		setAllProducts([]);//Limpiamos todos los productos del carrito
+        setTotal(0);//Total de la compra del carrito
+        setCountProducts(0);//Contador de productos en el carritoetAllProducts([]);
+        console.log(auxProducts)//Imprimimos a la variable auxiliar
     }
 
     const[products,setProduct] = useState([])
+
     useEffect ( ()=>{
-        getProducts();
+        getProducts();//llamamos a getProducts
     },[]);
 
     //Mostrar todos los productos
@@ -175,36 +173,36 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
     //obtienen todos los productos y con la funcion setProdcuts llenamos a products
     const getProducts = async () =>{
         const resultados = await axios.get(URL);
-        setProduct(resultados.data);
+        setProduct(resultados.data);//insertamos toda la base de datos en la variable
     }
 
     //A traves de Email.js con un servicio de gmail y luego un template donde entregamos los valores de
     //from_name,message,product_id informamos al admin cual producto tiene poca cantidad
     function sentEmail (){
-        products.map((product) =>{
+        products.map((product) =>{//Mapeamos a todos los productos
             if(product.stock <=5){
-                emailjs.send("service_mk4go39","template_ikfpdjf",{
-                    from_name: "Rico Shop",
-                    message: "Bajo contenido del producto con id",
-                    product_id: product.id,
-                    },"p8A4s0hvrgDzNMBUn");
+                emailjs.send("service_mk4go39","template_ikfpdjf",{// el servicio de emailjs y el template de emailjs
+                    from_name: "Rico Shop",//de parte de
+                    message: "Bajo contenido del producto con id",//mensaje
+                    product_id: product.id,//id del producto con el stock con baja disponibilidad
+                    },"p8A4s0hvrgDzNMBUn");//Llave publica de emailjs
             }
         }) 
     }
 
     //Cuando se realiza un pago se limpia todo el carrito y ademas se verifica cual de todos los productos tiene poca cantidad.
     const onClearPay = () =>{
-        setAllProducts([]);
-        setTotal(0);
-        setCountProducts(0);
-        sentEmail();
+        setAllProducts([]);//Limpiamos todos los productos del carrito
+        setTotal(0);//Total de la compra del carrito
+        setCountProducts(0);//Contador de productos en el carrito
+        sentEmail();//Verificamos si algun producto tiene baja disponibilidad en bodega
     }
 
     //Cuando se da click en el boton de cerrar seion,se limpia el carrito y el usuario activo.
 	const SesionOut = () =>{
         alert("Sesion cerrada...");
-		setUser("");
-		onCleanCart();
+		setUser("");//Nombre del usuario vacio(el usuario ha cerrado su sesion)
+		onCleanCart();//Para limpiar el carrito y devolver los productos reservado a la base datos
 	}
 
     
