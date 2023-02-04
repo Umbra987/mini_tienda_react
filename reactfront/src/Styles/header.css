@@ -1,6 +1,7 @@
 /*Estilos del header*/
 .header {
     width: 100%;
+	max-width: 1400px;
     height: 100px;
     display: flex;
 	top: 0;
