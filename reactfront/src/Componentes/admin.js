@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import '../Styles/admin.css'
 
 
-const URL = "http://localhost:8000/products/";
+const URL = "https://ecommerce-p3mq.onrender.com/products/";
 
 export const useAdmin = ({user,setUser}) =>{
 
@@ -35,7 +35,7 @@ export const useAdmin = ({user,setUser}) =>{
   
     //Actualizar la base de datos de lo productos
     const changeCamp = (body) => {
-        const get = axios.post("http://localhost:8000/change", body)
+        const get = axios.post("https://ecommerce-p3mq.onrender.com/change", body)
         console.log(get);
     }
 
@@ -66,7 +66,7 @@ export const useAdmin = ({user,setUser}) =>{
     const[userEmailIn,setUserEmailIn] = useState('');
 
     const changeAdmin = async (body) => {
-        const get = await axios.post("http://localhost:8000/admin", body)
+        const get = await axios.post("https://ecommerce-p3mq.onrender.com/admin", body)
         console.log(get);
     }
 

@@ -10,7 +10,7 @@ import emailjs from '@emailjs/browser'
 
 //Con sintaxis de desestructuracion obtenemos todos los valores que nos entrego App.js haciendolo de esta manera
 //No tenemos que usar la notacion de punto,sino que directamente usamos la variable
-const URL = "http://localhost:8000/products/";
+const URL = "https://ecommerce-p3mq.onrender.com/products/";
 
 const stripePromise = loadStripe("pk_test_51MX8LDAAbcGRHR0kZdoJ7icc44KgefTs6zm55ynKZuUoupKvnDWaKOJPzUBaYWTikfyf6XldiANQYIM0nOHghJQM00nhmDJUop");
 

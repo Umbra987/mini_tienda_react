@@ -4,7 +4,7 @@ import { useNavigate} from 'react-router-dom'
 
 
 
-const URL = "http://localhost:8000/products/";
+const URL = "https://ecommerce-p3mq.onrender.com/products/";
 
 const ShowProducts = ({allProducts,setAllProducts,countProducts,setCountProducts,total,setTotal,user}) =>{
 

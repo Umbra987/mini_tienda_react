@@ -18,7 +18,7 @@ export default function PayModal(promp){
                 alert("Tarjeta invalida");
                 return;
             }
-            fetch("http://localhost:8000/pay",{
+            fetch("https://ecommerce-p3mq.onrender.com/pay",{
                 method:'POST',
                 body: JSON.stringify({
                     id: paymentMethod.paymentMethod.id,

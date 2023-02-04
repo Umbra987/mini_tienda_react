@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useNavigate} from 'react-router-dom'
 import "../Styles/login.css"
 
-const URL = "http://localhost:8000/login/";
+const URL = "https://ecommerce-p3mq.onrender.com/login/";
 
 export const Login = ({user,setUser}) =>{          
 
