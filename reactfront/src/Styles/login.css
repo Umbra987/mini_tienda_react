@@ -1,5 +1,5 @@
 
-
+/* Estilos del contenedor del login */
 .containerLogin{
     margin: 0;
     padding: 0;
@@ -60,7 +60,7 @@
     font-size: 20px;
 }
 
-
+/* Estilos de la imagen del login */
 .imgLogin{
     width: 500px;
     display: flex;
@@ -71,6 +71,8 @@
     width: 60%;
 }
 
+
+/* Estilos del contenedor del registro */
 .Register{
     font-family: 'Playfair Display', serif;
     width: 100%;
@@ -83,6 +85,7 @@
     justify-content: space-evenly;
 }
 
+/* Estilos de la imagen del register */
 .Register img{
     width:100%;
 }
@@ -139,19 +142,14 @@
     justify-content: space-evenly;
 }
 
-
-
-
-
 .login .inputLogin input:focus{
     outline: none;
 }
 
+/* Clase para desactivar un elemento */
 .none{
     display: none;
 }
-
-
 
 .Register .btnSubmit{
     width: 200px;

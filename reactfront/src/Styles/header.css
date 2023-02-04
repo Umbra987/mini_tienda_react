@@ -20,6 +20,7 @@
 }
 
 
+/* Estilos del los logos del header */
 .logo_carrito{
 	position: relative;
     height: 100px;
@@ -82,6 +83,7 @@
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos del scroll en carrito */
 .container-carrito-products::-webkit-scrollbar {
 	width: 4px;
 	height: 100%;
@@ -226,6 +228,7 @@ separe tanto las columnas como las filas de la cuadrícula CSS con ese tamaño *
   border-radius: 0;
 }
 
+/* Estilos del boton para realizar el pago */
 .btn_pay{
 	border: none;
 	background-color: goldenrod;
@@ -252,6 +255,8 @@ separe tanto las columnas como las filas de la cuadrícula CSS con ese tamaño *
 	text-align: center;
 }
 
+
+/* Estilos de las flechas para agregar y disminuir la cantidad de un producto en el carrito */
 .AddRow{
 	width: 30px;
 	height: 30px;
@@ -278,7 +283,4 @@ separe tanto las columnas como las filas de la cuadrícula CSS con ese tamaño *
 	font-family: 'Aboreto', cursive;
 	user-select: none;
  }
-
- Card_Element{
-	height: 200px;
- }
+ 
