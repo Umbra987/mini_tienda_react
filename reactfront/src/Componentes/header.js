@@ -16,6 +16,9 @@ const stripePromise = loadStripe("pk_test_51MX8LDAAbcGRHR0kZdoJ7icc44KgefTs6zm55
 
 const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,setCountProducts,user,setUser}) => {
 
+    if(user.id==1){
+        setUser("");
+    }
 	
 	const navigate = useNavigate(); 
 
