@@ -8,7 +8,6 @@ const URL = "https://ecommerce-p3mq.onrender.com/products/";
 
 const ShowProducts = ({allProducts,setAllProducts,countProducts,setCountProducts,total,setTotal,user}) =>{
 
-    console.log(user);
 
     const restProduct = async (body) => {
         const get = await axios.post(URL, body)
