@@ -22,13 +22,6 @@ function App() {
   const [countProducts,setCountProducts] = useLocalStorage('countProducts', (0));//Contador de productos en el carrito
   const[user,setUser] =useLocalStorage('user', (""));
 
-  console.log(user.id);
-  
-  if(user.id==1){
-    
-    setUser("");
-  }
-
   //Les entregamos todo esto ya que tanto ShowHeader como MostrarProductos haran cosas distintas con ellos
   //Como es actualizarlos,añadir,eliminar productos de la lista y van a necesitar estos valores para actualizar el carrito
   return (
