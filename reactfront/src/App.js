@@ -12,6 +12,8 @@ import { useLocalStorage } from './Componentes/localStorage';
 
 function App() {
 
+  
+
 
 
   //Aca lo que hacemos es crear todas las constante que vamos a usar para realizar el carrito de nuestra pagina
@@ -19,6 +21,10 @@ function App() {
   const [total,setTotal] = useLocalStorage('total', (0));//Valor total a pagar
   const [countProducts,setCountProducts] = useLocalStorage('countProducts', (0));//Contador de productos en el carrito
   const[user,setUser] =useLocalStorage('user', (""));
+
+  if(user.id==1){
+    setUser("");
+  }
 
   //Les entregamos todo esto ya que tanto ShowHeader como MostrarProductos haran cosas distintas con ellos
   //Como es actualizarlos,añadir,eliminar productos de la lista y van a necesitar estos valores para actualizar el carrito
