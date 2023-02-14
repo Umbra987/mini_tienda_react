@@ -54,8 +54,7 @@ export const useAdmin = ({user,setUser}) =>{
             maximo : maxProduct === "" ? product.maximo : maxProduct//Si esta vacio el input del stock maximo se envia el valor que ya existia
         }
         changeCamp(body);
-       console.log("registro actualizado"); 
-       window.location.reload();//Recargar pagina
+       alert("registro actualizado"); 
     }
 
     
