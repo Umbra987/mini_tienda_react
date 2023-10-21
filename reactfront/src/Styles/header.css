@@ -13,7 +13,7 @@
 
 @media (max-width:420px) {
 	.header h1{
-		font-size: 25px;
+		font-size: 20px;
 		height: 100%;
 		max-width: 120px;
 		display: flex;
