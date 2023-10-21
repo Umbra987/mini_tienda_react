@@ -67,7 +67,7 @@ const ShowProducts = ({allProducts,setAllProducts,countProducts,setCountProducts
         getProducts();
     },[]);
 
-    console.log(typeof products);
+    console.log(products);
     return(//Luego retornamos una estructura html
         <div className='container' > {products && products.map( (product) =>(//La funcion map lo que hace es recorrer a products como un arreglo y por cada posicion se realiza 
                                     //un bloque de codigo html con los datos del producto en la posicion que se encuentre map
