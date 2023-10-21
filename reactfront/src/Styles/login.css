@@ -73,7 +73,6 @@
     width: 60%;
 }
 
-
 /* Estilos del contenedor del registro */
 .Register{
     font-family: 'Playfair Display', serif;
@@ -99,12 +98,10 @@
     margin-left: -200px;
 }
 
-
 .Register .btnSubmit{
     margin-top: -10%;
     margin-left: -5%;
 }
-
 
 .Register .inputLogin{
     background-color: transparent;
@@ -133,8 +130,6 @@
     bottom: 20%;
     color: gray;
 }
-
-
 
 .containerRegister{
     width: 80%;
@@ -192,6 +187,10 @@
 
     .Register .gmail{
         width: 55%;
+    }
+
+    .btnSubmit{
+        width: 100px;
     }
 
 }
