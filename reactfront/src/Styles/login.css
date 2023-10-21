@@ -75,7 +75,6 @@
 .Register{
     font-family: 'Playfair Display', serif;
     width: 100%;
-    padding-top: 20px;
     height: 100vh;
     background-color:rgb(232 231 226);
     display: flex;
