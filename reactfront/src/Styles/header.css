@@ -7,14 +7,16 @@
 	left: 0;
 	position: fixed;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: black;
 }
+
 
 /*Clase para llegar a apagar algun objeto del DOM */
 .none{
     display: none;
 }
+
 
 /* Estilos del los logos del header */
 .logo_carrito{
@@ -39,7 +41,7 @@
 
 .logo_header{
 	margin-top: 1px;
-    height: 100%;
+    width: 106px;
     z-index: 1;
 }
 

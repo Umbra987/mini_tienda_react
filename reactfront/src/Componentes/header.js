@@ -208,9 +208,9 @@ const ShowHeader = ({allProducts,setAllProducts,total,countProducts,setTotal,set
     
 
     return (//En la linea 32 vemos para que sirve active que sirve es para añadir la clase none que quiere decir que el carrito esta desactivado y si se l removemos quiere decir que esta activo
-        <div className="header">		
+        <div className="header">
+			<h1>Rico Shop</h1>
             <div className="logo_header">
-                <h1>Rico Shop</h1>
                 <div className={`container-carrito-products ${active ? '' : 'none'}`}>
                 {
                     allProducts.length ? (
