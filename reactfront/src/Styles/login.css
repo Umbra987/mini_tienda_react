@@ -99,25 +99,6 @@
     margin-left: -200px;
 }
 
-@media (max-width:420px) {
-
-	.Register .containerRegister{
-        margin-left: 0;
-        width: 100%;
-	}
-
-    .Register .inputLogin{
-        width: 90%;
-    }
-
-    .Register .btnSubmit{
-        width: auto;
-    }
-
-    .Register .gmail{
-        width: 55%;
-    }
-}
 
 .Register .btnSubmit{
     margin-top: -10%;
@@ -186,4 +167,25 @@
 
 .btnSubmit:hover{
     background-color: gray;
+}
+
+
+@media (max-width:420px) {
+
+	.Register .containerRegister{
+        margin-left: 0;
+        width: 100%;
+	}
+
+    .Register .inputLogin{
+        width: 90%;
+    }
+
+    .Register .btnSubmit{
+        max-width: 150px;
+    }
+
+    .Register .gmail{
+        width: 55%;
+    }
 }
