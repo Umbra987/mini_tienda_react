@@ -1,8 +1,6 @@
 
 /* Estilos del contenedor del login */
-body::-webkit-scrollbar {
-    display: none;
-}
+
 
 .containerLogin{
     margin: 0;
@@ -10,7 +8,7 @@ body::-webkit-scrollbar {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -81,7 +79,7 @@ body::-webkit-scrollbar {
     font-family: 'Playfair Display', serif;
     width: 100%;
     padding-top: 20px;
-    height: 100%;
+    height: 100vh;
     background-color:rgb(232 231 226);
     display: flex;
     flex-flow: column wrap;
@@ -95,7 +93,7 @@ body::-webkit-scrollbar {
 }
 
 .Register .containerRegister{
-    width: 500px;
+    max-width: 500px;
     display: flex;
     flex-flow: column wrap;
     margin-left: -200px;
