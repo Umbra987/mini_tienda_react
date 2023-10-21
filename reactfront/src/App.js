@@ -17,7 +17,7 @@ function App() {
 
 
   //Aca lo que hacemos es crear todas las constante que vamos a usar para realizar el carrito de nuestra pagina
-  const [allProducts,setAllProducts] = useLocalStorage('allProducts', ([])); //Lista de los productos que hay en él
+  const [allProducts,setAllProducts] = useLocalStorage('allProducts', []); //Lista de los productos que hay en él
   const [total,setTotal] = useLocalStorage('total', (0));//Valor total a pagar
   const [countProducts,setCountProducts] = useLocalStorage('countProducts', (0));//Contador de productos en el carrito
   const[user,setUser] =useLocalStorage('user', (""));
