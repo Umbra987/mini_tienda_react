@@ -107,13 +107,15 @@
 	}
 
     .Register .inputLogin{
-        width: 70%;
+        width: 90%;
     }
 
-    .Register .inputLogin .gmail{
-        display: inline;
-        margin-left: 0;
-        width: 60%;
+    .Register .btnSubmit{
+        width: auto;
+    }
+
+    .Register .gmail{
+        width: 55%;
     }
 }
 
