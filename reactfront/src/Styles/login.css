@@ -1,5 +1,9 @@
 
 /* Estilos del contenedor del login */
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .containerLogin{
     margin: 0;
     padding: 0;
