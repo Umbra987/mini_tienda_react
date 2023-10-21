@@ -16,7 +16,7 @@
 		font-size: 25px;
 		height: 100%;
 		max-width: 120px;
-		text-align: center;
+		display: flex;
 		align-items: center;
 	}
 }
