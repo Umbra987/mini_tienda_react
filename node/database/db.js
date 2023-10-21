@@ -6,13 +6,7 @@ import { Sequelize } from "sequelize"
 
 const db = new Sequelize('productosapp','umbra987','Manchitas12',{
     host:'ricoshop.com.mialias.net',
-    dialect: 'mysql',
-    dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false // Esto puede ser seguro en ciertos contextos, pero verifica las implicaciones de seguridad
-        }
-    }
+    dialect: 'mysql'
 });
 
 
