@@ -30,6 +30,13 @@ body{
 		margin-top: 15%;
 	}
 }
+
+@media (max-width:420px) {
+	.container{
+		margin-top: 20%;
+	}
+}
+
 /*El contenedor de cada producto */
 .container_product{
     display: flex;

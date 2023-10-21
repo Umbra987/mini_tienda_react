@@ -11,6 +11,11 @@
     background-color: black;
 }
 
+@media (max-width:420px) {
+	.header h1{
+		font-size: 25px;
+	}
+}
 
 /*Clase para llegar a apagar algun objeto del DOM */
 .none{
