@@ -8,18 +8,14 @@
 	position: fixed;
     align-items: center;
     justify-content: space-between;
+	flex-flow: wrap row;
     background-color: black;
 }
-
-
-
-
 
 /*Clase para llegar a apagar algun objeto del DOM */
 .none{
     display: none;
 }
-
 
 /* Estilos del los logos del header */
 .logo_carrito{
