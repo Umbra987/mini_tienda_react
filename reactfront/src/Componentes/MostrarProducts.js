@@ -53,12 +53,6 @@ const ShowProducts = ({allProducts,setAllProducts,countProducts,setCountProducts
     }
 
 
-    //Lo que hacemos es llenar a products con todos los objetos que hayan en la base datos
-    const[products,setProduct] = useState([])
-    useEffect ( ()=>{
-        getProducts();
-    },[]);
-
     //Mostrar todos los productos
     //Los productos los conseguimos usando axios.get(URL) que junto con express se conectan a la base de datos
     //obtienen todos los productos y con la funcion setProdcuts llenamos a products
@@ -66,9 +60,16 @@ const ShowProducts = ({allProducts,setAllProducts,countProducts,setCountProducts
         const resultados = await axios.get(URL);
         setProduct(resultados.data);
     }
+
+    //Lo que hacemos es llenar a products con todos los objetos que hayan en la base datos
+    const[products,setProduct] = useState([])
+    useEffect ( ()=>{
+        getProducts();
+    },[]);
+
+    console.log(typeof products);
     return(//Luego retornamos una estructura html
-        <div className='container' > {
-        products.map( (product) =>(//La funcion map lo que hace es recorrer a products como un arreglo y por cada posicion se realiza 
+        <div className='container' > {products && products.map( (product) =>(//La funcion map lo que hace es recorrer a products como un arreglo y por cada posicion se realiza 
                                     //un bloque de codigo html con los datos del producto en la posicion que se encuentre map
             <div className='container_product' key={product.id}>
                 <div className='img_product'>
